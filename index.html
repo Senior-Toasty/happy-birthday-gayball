@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#AACFF1">
+<meta name="description" content="A little underwater birthday universe made for Zolani Anele Nqcobo.">
+<title>Happy Birthday, Zolani! · The Blue Abyss</title>
+<style>
+:root{--blue:#AACFF1;--yellow:#FFF4BB;--pink:#F8B8D0;--ink:#183957;--muted:#55718b;--line:rgba(24,57,87,.2);--serif:Georgia,"Times New Roman",serif;--sans:"Trebuchet MS",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--blue);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+a{color:inherit}
+button{font:inherit}
+::selection{background:var(--pink);color:var(--ink)}
+.site-shell{max-width:1400px;margin:auto;overflow:hidden;position:relative}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:24px clamp(20px,5vw,72px);border-bottom:1px solid var(--line);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand-mark{width:28px;height:28px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:15px}
+.nav{display:flex;gap:26px}
+.nav a{text-decoration:none;opacity:.8}.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.hero{min-height:690px;padding:70px clamp(20px,7vw,100px) 78px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:35px;position:relative}
+.kicker,.eyebrow{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+.kicker:before{content:"";display:inline-block;width:28px;border-top:2px solid var(--ink);vertical-align:middle;margin:0 10px 3px 0}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(4.5rem,10vw,9.6rem);line-height:.83;letter-spacing:-.075em;margin:28px 0 24px}
+.hero h1 em{font-weight:400;color:var(--yellow);display:block;margin-left:.55em}
+.hero-copy p{max-width:410px;line-height:1.8;font-size:1rem;color:#294b69}
+.hero-copy .date{margin-top:34px;display:inline-flex;align-items:center;gap:12px;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+.date span{background:var(--pink);padding:11px 15px;border-radius:40px}
+.hero-art{min-height:480px;border-radius:48% 48% 44% 44% / 44% 44% 48% 48%;background:var(--yellow);position:relative;display:grid;place-items:center;border:1px solid rgba(24,57,87,.12);transform:rotate(1.5deg)}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px dashed rgba(24,57,87,.35);border-radius:50%;inset:20px;pointer-events:none}
+.hero-art:after{inset:43px;transform:rotate(-12deg)}
+.hero-art svg{width:88%;max-width:570px;z-index:1;overflow:visible}
+.art-note{position:absolute;z-index:3;background:var(--pink);padding:10px 14px;border-radius:3px;font-family:var(--serif);font-style:italic;font-size:1rem;box-shadow:3px 4px 0 var(--ink);transform:rotate(-7deg)}
+.note-one{top:13%;right:2%}.note-two{bottom:13%;left:2%;transform:rotate(5deg)}
+.spark{position:absolute;font-size:24px;color:var(--pink);z-index:2}
+.spark.s1{top:8%;left:17%}.spark.s2{bottom:20%;right:12%}.spark.s3{top:28%;right:12%;font-size:15px}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+.ticker{background:var(--pink);padding:13px 0;overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);white-space:nowrap}
+.ticker-track{display:inline-block;animation:marquee 28s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.15rem;letter-spacing:.05em}
+.ticker-track span{padding:0 28px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:100px clamp(20px,7vw,100px)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:42px}
+.section h2{font:400 clamp(3rem,6vw,5.8rem)/.95 var(--serif);letter-spacing:-.055em;margin:14px 0 0}
+.section-head p{max-width:310px;line-height:1.7;color:#355876;margin:0}
+.creatures{background:var(--yellow);position:relative}
+.creatures:before{content:"";position:absolute;top:0;left:0;right:0;height:9px;background:repeating-linear-gradient(90deg,var(--pink) 0 24px,transparent 24px 34px)}
+.creature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.creature-card{border:1px solid var(--line);padding:17px 17px 22px;min-height:305px;position:relative;transition:transform .25s;background:rgba(255,255,255,.19)}
+.creature-card:hover{transform:translateY(-7px) rotate(-.5deg)}
+.creature-card:nth-child(even){transform:translateY(16px)}
+.creature-card:nth-child(even):hover{transform:translateY(9px) rotate(.5deg)}
+.creature-art{height:170px;display:grid;place-items:center;background:var(--blue);margin-bottom:20px;overflow:hidden}
+.creature-art svg{width:100%;height:100%;max-width:220px}
+.creature-card h3{font:400 1.7rem var(--serif);margin:0 0 7px}
+.creature-card p{font-size:.82rem;line-height:1.6;color:#49647d;margin:0}
+.number{position:absolute;top:23px;left:25px;font-size:.62rem;letter-spacing:.15em;background:var(--pink);padding:5px 8px}
+.myth{display:grid;grid-template-columns:.88fr 1.12fr;gap:70px;align-items:center}
+.myth-art{background:var(--pink);min-height:460px;display:grid;place-items:center;position:relative;border-radius:48% 48% 4px 4px;overflow:hidden}
+.myth-art svg{width:90%;max-width:440px}
+.myth-copy p{line-height:1.85;color:#294b69;max-width:510px}
+.myth-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.myth-list span{border:1px solid var(--ink);border-radius:30px;padding:9px 13px;font-size:.74rem}
+.grimoire{background:var(--yellow);padding:clamp(28px,5vw,65px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;border:1px solid var(--line);position:relative}
+.grimoire:after{content:"✦";position:absolute;top:18px;right:25px;font-size:2rem;color:var(--pink)}
+.book{background:var(--blue);padding:30px;min-height:300px;border-radius:4px 18px 18px 4px;box-shadow:inset 10px 0 rgba(24,57,87,.1),8px 10px 0 rgba(24,57,87,.13);display:flex;flex-direction:column;justify-content:center;text-align:center;border-left:5px solid var(--pink)}
+.book small{letter-spacing:.2em;text-transform:uppercase;font-size:.65rem}
+.book h3{font:400 2.7rem var(--serif);margin:20px 0}
+.book p{font:italic 1rem/1.7 var(--serif);max-width:330px;margin:0 auto}
+.action{border:1px solid var(--ink);background:var(--ink);color:var(--yellow);padding:13px 19px;border-radius:30px;cursor:pointer;font-weight:800;font-size:.77rem;letter-spacing:.05em;transition:transform .2s,box-shadow .2s}
+.action:hover{transform:translateY(-3px);box-shadow:0 5px 0 var(--pink)}
+.action:focus-visible{outline:3px solid var(--pink);outline-offset:4px}
+.magic-result{min-height:48px;margin-top:17px;font:italic 1.05rem/1.5 var(--serif);color:#345875}
+.arcade{background:var(--pink);position:relative}
+.arcade .section-head p{color:#5f4260}
+.arcade-box{background:var(--yellow);border:1px solid var(--ink);padding:clamp(22px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;box-shadow:8px 8px 0 var(--ink)}
+.arcade-wheel-wrap{display:grid;place-items:center;position:relative;min-height:330px}
+.wheel{width:min(270px,72vw);aspect-ratio:1;border-radius:50%;border:9px solid var(--ink);background:conic-gradient(from -15deg,var(--blue) 0 45deg,var(--pink) 45deg 90deg,var(--yellow) 90deg 135deg,var(--blue) 135deg 180deg,var(--pink) 180deg 225deg,var(--yellow) 225deg 270deg,var(--blue) 270deg 315deg,var(--pink) 315deg);display:grid;place-items:center;box-shadow:0 8px 0 rgba(24,57,87,.2);transition:transform 2.6s cubic-bezier(.12,.72,.12,1);position:relative}
+.wheel:before{content:"";position:absolute;inset:18px;border:1px dashed var(--ink);border-radius:50%}
+.wheel-core{width:80px;height:80px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:grid;place-items:center;font-size:2rem;z-index:1}
+.pointer{position:absolute;top:4px;left:50%;transform:translateX(-50%);z-index:2;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:25px solid var(--ink)}
+.arcade-info h3{font:400 2.5rem var(--serif);margin:0 0 12px}
+.arcade-info p{line-height:1.75;color:#49647d;font-size:.9rem}
+.spin-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px}
+.spin-result{min-height:70px;margin-top:18px;padding:15px;border-left:4px solid var(--pink);background:rgba(170,207,241,.35);font:italic 1.05rem/1.6 var(--serif)}
+.collection{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.collectible{border:1px solid var(--line);padding:7px 10px;border-radius:20px;font-size:.7rem;background:rgba(255,255,255,.34)}
+.odds{font-size:.68rem!important;color:#62788d!important;margin-top:13px}
+.closing{padding:110px 20px;text-align:center;position:relative}
+.closing .tiny{letter-spacing:.2em;text-transform:uppercase;font-size:.7rem}
+.closing h2{font:400 clamp(3.8rem,10vw,9rem)/.9 var(--serif);letter-spacing:-.07em;margin:25px 0}
+.closing h2 span{color:var(--yellow);font-style:italic}
+.closing p{max-width:500px;line-height:1.8;margin:0 auto;color:#355876}
+.signature{font:italic 1.2rem var(--serif);margin-top:35px}
+.footer{padding:24px clamp(20px,5vw,72px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.bubble{position:fixed;bottom:-30px;border:1px solid rgba(255,255,255,.8);border-radius:50%;pointer-events:none;z-index:9;animation:rise 3.5s ease-out forwards}
+@keyframes rise{to{transform:translateY(-110vh) translateX(var(--drift));opacity:0}}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:60px;gap:55px}.hero-copy{max-width:650px}.hero-art{min-height:430px;max-width:620px;width:100%;margin:auto}.creature-grid{grid-template-columns:repeat(2,1fr)}.myth{gap:35px}.arcade-box{gap:20px}}
+@media(max-width:600px){.topbar{padding:18px 20px}.nav{gap:12px}.nav a{font-size:.61rem}.nav a:nth-child(2){display:none}.hero{padding:56px 22px 70px;min-height:auto}.hero h1{font-size:clamp(4.5rem,19vw,7rem)}.hero-art{min-height:330px}.art-note{font-size:.8rem}.section{padding:75px 20px}.section-head{display:block}.section-head p{margin-top:18px}.creature-grid{gap:10px}.creature-card{padding:10px;min-height:275px}.creature-card:nth-child(even){transform:translateY(9px)}.creature-art{height:135px}.creature-card h3{font-size:1.35rem}.creature-card p{font-size:.74rem}.myth{grid-template-columns:1fr;gap:34px}.myth-art{min-height:340px}.grimoire{grid-template-columns:1fr;gap:27px}.book{min-height:260px}.arcade-box{grid-template-columns:1fr;box-shadow:5px 5px 0 var(--ink)}.arcade-wheel-wrap{min-height:290px}.footer{flex-direction:column;text-align:center}.closing{padding:85px 20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="site-shell">
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">✳</span><span>The Blue Abyss</span></div>
+  <nav class="nav" aria-label="Main navigation"><a href="#ocean">Ocean friends</a><a href="#myths">Myth & magic</a><a href="#arcade">Lucky Tide</a></nav>
+  <div>Vol. 01 · Z.A.N.</div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">A birthday made of seafoam & stardust</div>
+    <h1>Happy<br><em>Birthday,</em>Zolani.</h1>
+    <p>For someone whose imagination is as deep as the ocean and whose favourite creatures are just a little bit magical. Today, the whole blue universe is celebrating you.</p>
+    <div class="date"><span>23 November 2026</span> <b>✦ Level up day</b></div>
+  </div>
+  <div class="hero-art" aria-label="Illustration of a whale swimming through a magical ocean">
+    <span class="spark s1">✧</span><span class="spark s2">✦</span><span class="spark s3">✳</span>
+    <span class="art-note note-one">the sea called...</span><span class="art-note note-two">it's your day!</span>
+    <svg viewBox="0 0 560 470" role="img" aria-hidden="true">
+      <path d="M44 321 C105 270 123 153 250 142 C370 132 440 201 481 273 C432 248 392 259 361 290 C293 355 157 365 44 321Z" fill="#AACFF1" stroke="#183957" stroke-width="3"/>
+      <path d="M120 280 C171 218 249 201 328 228 C377 245 397 279 428 303 C363 361 226 371 120 280Z" fill="#8DB9E4" stroke="#183957" stroke-width="3"/>
+      <path d="M425 279 Q481 247 516 196 Q519 256 478 320 Q508 352 527 389 Q465 368 421 330" fill="#F8B8D0" stroke="#183957" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M178 228 Q164 181 190 167 Q221 154 232 194" fill="none" stroke="#183957" stroke-width="3" stroke-linecap="round"/>
+      <path d="M256 218 Q275 199 301 209" fill="none" stroke="#183957" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="339" cy="263" r="6" fill="#183957"/><path d="M350 286 Q366 298 379 286" fill="none" stroke="#183957" stroke-width="3" stroke-linecap="round"/>
+      <path d="M142 292 Q104 275 89 246 Q76 292 117 324" fill="#AACFF1" stroke="#183957" stroke-width="3"/>
+      <path d="M295 171 Q274 122 300 91 Q322 125 311 158" fill="#F8B8D0" stroke="#183957" stroke-width="3"/>
+      <path d="M296 91 Q292 65 310 51 Q326 78 311 102" fill="none" stroke="#183957" stroke-width="2"/>
+      <g fill="none" stroke="#183957" stroke-width="2">
+        <path d="M72 126 q-12 -23 0 -39 q13 19 0 39"/><path d="M72 126 l-11 13 m11 -13 13 13"/>
+        <path d="M451 113 q-14 -24 0 -43 q13 19 0 43"/><path d="M451 113 l-10 13 m10 -13 12 13"/>
+        <path d="M100 386 q-11 -19 0 -34 q11 16 0 34"/><path d="M100 386 l-10 11 m10 -11 10 11"/>
+      </g>
+      <g fill="#F8B8D0" stroke="#183957" stroke-width="2"><path d="M399 142 l8 16 17 2 -13 12 3 17 -15 -9 -15 9 3 -17 -13 -12 17 -2Z"/><circle cx="173" cy="95" r="8"/><circle cx="472" cy="398" r="6"/></g>
+      <g fill="#183957"><circle cx="55" cy="206" r="3"/><circle cx="504" cy="149" r="3"/><circle cx="227" cy="398" r="3"/></g>
+    </svg>
+  </div>
+  <div class="scroll-cue">↓ &nbsp; explore your little universe</div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>JELLYFISH DREAMS ✳</span><span>WIZARD ENERGY ✦</span><span>OCEAN MAGIC ✳</span><span>HAPPY BIRTHDAY ZOLANI ✦</span><span>JELLYFISH DREAMS ✳</span><span>WIZARD ENERGY ✦</span><span>OCEAN MAGIC ✳</span><span>HAPPY BIRTHDAY ZOLANI ✦</span></div></div>
+
+<section class="section creatures" id="ocean">
+  <div class="section-head">
+    <div><div class="eyebrow">Chapter 01 · Your ocean</div><h2>The deep blue<br>fan club.</h2></div>
+    <p>A few residents of the sea came out especially for you. They wanted it known that you have excellent taste in aquatic life.</p>
+  </div>
+  <div class="creature-grid">
+    <article class="creature-card"><span class="number">01 / FAVOURITE</span><div class="creature-art">
+      <svg viewBox="0 0 220 170" aria-hidden="true"><path d="M65 53 Q110 3 155 53 Q180 86 150 107 Q110 131 70 107 Q40 86 65 53Z" fill="#F8B8D0" stroke="#183957" stroke-width="2.5"/><path d="M77 102 Q65 135 49 150 M94 110 Q90 139 82 157 M111 113 Q112 142 111 158 M128 110 Q141 139 146 153 M145 102 Q169 130 176 146" fill="none" stroke="#183957" stroke-width="2.5" stroke-linecap="round"/><path d="M82 66 Q94 54 106 66 M120 66 Q132 54 143 66" fill="none" stroke="#183957" stroke-width="2"/><circle cx="96" cy="78" r="3" fill="#183957"/><circle cx="130" cy="78" r="3" fill="#183957"/><path d="M107 88 q7 8 14 0" fill="none" stroke="#183957" stroke-width="2"/><path d="M41 42 l5 10 11 2 -8 8 2 11 -10 -6 -10 6 2 -11 -8 -8 11 -2Z" fill="#FFF4BB" stroke="#183957" stroke-width="1.5"/></svg>
+    </div><h3>Jellyfish</h3><p>Floating like a tiny, elegant alien. Obviously the main character.</p></article>
+    <article class="creature-card"><span class="number">02 / GENTLE GIANT</span><div class="creature-art">
+      <svg viewBox="0 0 220 170" aria-hidden="true"><path d="M31 90 Q61 43 132 53 Q166 57 180 88 Q158 119 94 119 Q52 117 31 90Z" fill="#AACFF1" stroke="#183957" stroke-width="2.5"/><path d="M174 84 Q196 62 207 43 Q207 81 191 96 Q205 118 211 139 Q182 126 168 108" fill="#F8B8D0" stroke="#183957" stroke-width="2.5"/><path d="M83 115 Q87 145 111 142 Q129 135 126 115" fill="#8DB9E4" stroke="#183957" stroke-width="2"/><circle cx="151" cy="81" r="4" fill="#183957"/><path d="M133 96 Q144 105 155 96" fill="none" stroke="#183957" stroke-width="2"/><path d="M104 53 Q87 33 102 20 Q114 34 110 52" fill="none" stroke="#183957" stroke-width="2.5"/><path d="M102 20 q-4 -10 5 -16" fill="none" stroke="#183957" stroke-width="2"/></svg>
+    </div><h3>Blue whale</h3><p>Quietly enormous. Just cruising through life at whale speed.</p></article>
+    <article class="creature-card"><span class="number">03 / CLEVER ONE</span><div class="creature-art">
+      <svg viewBox="0 0 220 170" aria-hidden="true"><path d="M72 72 Q110 27 147 72 L147 112 Q110 143 72 112Z" fill="#F8B8D0" stroke="#183957" stroke-width="2.5"/><path d="M78 108 Q40 124 44 151 M91 117 Q65 146 73 159 M108 121 Q99 147 111 160 M128 118 Q151 143 145 158 M143 108 Q179 125 176 148" fill="none" stroke="#183957" stroke-width="5" stroke-linecap="round"/><circle cx="97" cy="89" r="4" fill="#183957"/><circle cx="125" cy="89" r="4" fill="#183957"/><path d="M101 101 Q111 109 121 101" fill="none" stroke="#183957" stroke-width="2"/><path d="M80 63 Q57 39 68 22 M137 62 Q157 35 151 19" fill="none" stroke="#183957" stroke-width="2.5"/></svg>
+    </div><h3>Octopus</h3><p>Eight arms, a thousand clever plans, and absolutely no boring days.</p></article>
+    <article class="creature-card"><span class="number">04 / LITTLE LEGEND</span><div class="creature-art">
+      <svg viewBox="0 0 220 170" aria-hidden="true"><path d="M104 28 Q126 37 120 66 Q114 89 91 98 Q69 107 78 133 Q95 152 119 134 Q139 119 135 96 Q130 75 149 67 Q161 62 160 49 Q155 34 139 38" fill="#FFF4BB" stroke="#183957" stroke-width="3" stroke-linecap="round"/><path d="M93 91 Q112 89 123 102 L116 131 Q97 141 83 127" fill="#F8B8D0" stroke="#183957" stroke-width="2.5"/><path d="M120 39 Q137 18 154 31 Q138 43 120 39" fill="#AACFF1" stroke="#183957" stroke-width="2"/><circle cx="126" cy="80" r="3" fill="#183957"/><path d="M113 88 Q122 94 131 86" fill="none" stroke="#183957" stroke-width="2"/><path d="M72 51 q-9 -17 4 -24 q13 14 4 25" fill="#AACFF1" stroke="#183957" stroke-width="2"/></svg>
+    </div><h3>Seahorse</h3><p>A tiny underwater dragon wearing the world's best curly tail.</p></article>
+  </div>
+</section>
+
+<section class="section" id="myths">
+  <div class="myth">
+    <div class="myth-art">
+      <svg viewBox="0 0 430 430" role="img" aria-label="A mythical sea dragon with a curled tail">
+        <path d="M103 278 Q62 230 104 177 Q150 121 229 151 Q281 171 271 225 Q263 266 218 278 Q177 289 173 325 Q172 361 215 368 Q267 378 287 333" fill="none" stroke="#183957" stroke-width="31" stroke-linecap="round"/>
+        <path d="M103 278 Q62 230 104 177 Q150 121 229 151 Q281 171 271 225 Q263 266 218 278 Q177 289 173 325 Q172 361 215 368 Q267 378 287 333" fill="none" stroke="#AACFF1" stroke-width="24" stroke-linecap="round"/>
+        <path d="M200 146 Q227 101 280 111 Q306 116 322 143 L360 159 L323 175 Q308 213 265 211 Q224 204 200 174Z" fill="#AACFF1" stroke="#183957" stroke-width="3"/>
+        <path d="M222 130 Q206 91 230 70 Q251 101 247 123 M270 118 Q270 79 303 64 Q307 103 290 125" fill="#FFF4BB" stroke="#183957" stroke-width="3"/>
+        <path d="M311 152 l33 7 -28 14" fill="#F8B8D0" stroke="#183957" stroke-width="2"/>
+        <circle cx="300" cy="144" r="5" fill="#183957"/>
+        <path d="M250 194 Q268 228 296 218" fill="none" stroke="#183957" stroke-width="3"/>
+        <g fill="#FFF4BB" stroke="#183957" stroke-width="2"><path d="M130 191 l9 18 20 2 -15 13 4 20 -18 -10 -17 10 3 -20 -15 -13 20 -2Z"/><path d="M330 265 l7 13 15 2 -11 10 3 15 -14 -7 -13 7 3 -15 -11 -10 15 -2Z"/></g>
+        <g fill="#183957"><circle cx="83" cy="107" r="4"/><circle cx="353" cy="91" r="4"/><circle cx="104" cy="350" r="4"/></g>
+      </svg>
+    </div>
+    <div class="myth-copy"><div class="eyebrow">Chapter 02 · Beyond the ordinary</div><h2>Born for a<br>little magic.</h2><p>Some people are happy with ordinary fish. You, naturally, went for mythical creatures, witches, wizards and entire magical worlds. So this part of the ocean has a few legends hiding in it.</p><p>May your next chapter have the courage of a wizard, the curiosity of an explorer and the kind of plot twists that actually work out in your favour.</p><div class="myth-list"><span>Sea dragons</span><span>Mermaids</span><span>Kraken</span><span>Phoenix</span><span>Unicorns</span><span>Witches & wizards</span></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grimoire">
+    <div><div class="eyebrow">A note from the wizard's desk</div><h2>A birthday<br>spell for you.</h2><p style="line-height:1.8;color:#49647d;max-width:420px">Every great wizard needs a grimoire. Yours comes with one very important spell: a reminder that you're one of a kind. Tap the button to turn the page.</p><button class="action" id="spellButton">Cast a birthday spell ✦</button><div class="magic-result" id="spellResult" aria-live="polite">The pages are waiting for you...</div></div>
+    <div class="book"><small>Grimoire No. 023 · Birthday edition</small><h3>Fortuna Maris</h3><p>“May good things find you like the tide finds the shore. May wonder never run out, and may every new level bring a better adventure.”</p><small style="margin-top:24px">✧ sealed with stardust ✧</small></div>
+  </div>
+</section>
+
+<section class="section arcade" id="arcade">
+  <div class="section-head"><div><div class="eyebrow">Chapter 03 · The arcade</div><h2>Test your<br>tide luck.</h2></div><p>A tiny game for the birthday wizard. Spin the wheel and see which treasure the ocean sends your way.</p></div>
+  <div class="arcade-box">
+    <div class="arcade-wheel-wrap"><div class="pointer"></div><div class="wheel" id="wheel"><div class="wheel-core">✦</div></div></div>
+    <div class="arcade-info"><div class="eyebrow">Lucky Tide · Free play</div><h3>What will the sea send?</h3><p>Every spin is free. No coins, no bets, no purchases. Just a little luck and a collection of strange things from the deep.</p><div class="spin-row"><button class="action" id="spinButton">Spin the tides ↗</button><span id="spinCount" style="font-size:.75rem;font-weight:800">Spins: 0</span></div><div class="spin-result" id="spinResult" aria-live="polite">Your treasure is somewhere beneath the waves. Give the wheel a spin.</div><div class="eyebrow" style="margin-top:24px">Your little collection</div><div class="collection" id="collection"><span class="collectible">Nothing found yet · go explore</span></div><p class="odds">Drop rates: Common 55% · Uncommon 30% · Rare 12% · Mythic 3%. Just for fun, forever free.</p></div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="tiny">And finally, to the birthday boy</div>
+  <h2>Stay a little<br><span>legend.</span></h2>
+  <p>Keep loving the weird and wonderful things. Keep asking questions, chasing magic and finding beauty in the deep blue. The world is much more interesting with people like you in it.</p>
+  <div class="signature">Happy birthday, Zolani. ✦</div>
+</section>
+</main>
+<footer class="footer"><span>Made with love & a suspicious amount of jellyfish</span><span>23 · 11 · 2026 &nbsp; / &nbsp; The Blue Abyss</span></footer>
+</div>
+<script>
+const spellLines=[
+  "✨ Spell cast: +100 years of good luck, +1000 new adventures, and absolutely zero boring days.",
+  "🪄 Your grimoire says: the next chapter has your name written all over it.",
+  "🌊 Ocean blessing unlocked: may every rough wave carry you somewhere better.",
+  "⭐ Mythic aura activated. Stay curious, stay strange, stay brilliantly you.",
+  "🐙 Eight arms of luck are officially looking after you. You're welcome."
+];
+const spellButton=document.getElementById("spellButton");
+spellButton.addEventListener("click",()=>{
+  document.getElementById("spellResult").textContent=spellLines[Math.floor(Math.random()*spellLines.length)];
+  bubbles(12);
+});
+const prizes=[
+ {name:"Pocket Jellyfish",emoji:"🪼",rarity:"Common",weight:22},
+ {name:"Tiny Sea Star",emoji:"⭐",rarity:"Common",weight:18},
+ {name:"Pearl Shell",emoji:"🐚",rarity:"Common",weight:15},
+ {name:"Baby Seahorse",emoji:"🐠",rarity:"Uncommon",weight:15},
+ {name:"Moonlit Whale",emoji:"🐋",rarity:"Uncommon",weight:15},
+ {name:"Clever Octopus",emoji:"🐙",rarity:"Rare",weight:8},
+ {name:"Sea Dragon",emoji:"🐉",rarity:"Rare",weight:4},
+ {name:"Wizard's Grimoire",emoji:"📖",rarity:"Mythic",weight:2},
+ {name:"A Star from the Deep",emoji:"🌟",rarity:"Mythic",weight:1}
+];
+let spins=0,turn=0;
+const found=new Map();
+const wheel=document.getElementById("wheel");
+const spinButton=document.getElementById("spinButton");
+function choosePrize(){
+ let roll=Math.random()*100;
+ for(const prize of prizes){roll-=prize.weight;if(roll<0)return prize;}
+ return prizes[0];
+}
+spinButton.addEventListener("click",()=>{
+ if(spinButton.disabled)return;
+ spinButton.disabled=true;
+ spinButton.textContent="The sea is choosing...";
+ const prize=choosePrize();
+ turn+=1440+Math.floor(Math.random()*360);
+ wheel.style.transform="rotate("+turn+"deg)";
+ spins++;
+ document.getElementById("spinCount").textContent="Spins: "+spins;
+ window.setTimeout(()=>{
+   const previous=found.get(prize.name)||0;
+   found.set(prize.name,previous+1);
+   const result=document.getElementById("spinResult");
+   result.innerHTML="<strong>"+prize.emoji+" "+prize.name+"!</strong><br>"+(previous?"Another one! Your collection now has "+(previous+1)+".":"A new "+prize.rarity.toLowerCase()+" treasure has joined your collection.")+"";
+   renderCollection();
+   spinButton.disabled=false;
+   spinButton.textContent="Spin again ↗";
+   if(prize.rarity==="Mythic")bubbles(22);
+ },2650);
+});
+function renderCollection(){
+ const area=document.getElementById("collection");
+ area.innerHTML="";
+ for(const [name,count] of found){
+   const prize=prizes.find(p=>p.name===name);
+   const tag=document.createElement("span");
+   tag.className="collectible";
+   tag.textContent=prize.emoji+" "+name+(count>1?" ×"+count:"");
+   area.appendChild(tag);
+ }
+}
+function bubbles(amount){
+ for(let i=0;i<amount;i++){
+   const b=document.createElement("span");
+   b.className="bubble";
+   const size=7+Math.random()*17;
+   b.style.width=size+"px";b.style.height=size+"px";
+   b.style.left=(Math.random()*100)+"vw";
+   b.style.setProperty("--drift",(Math.random()*100-50)+"px");
+   b.style.animationDuration=(2.2+Math.random()*2.1)+"s";
+   document.body.appendChild(b);
+   window.setTimeout(()=>b.remove(),4800);
+ }
+}
+</script>
+</body>
+</html>
